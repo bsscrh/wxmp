@@ -1,0 +1,5 @@
+<view class='dad'>
+  <view class='son1'></view>
+  <view class='son2'></view>
+  <view class='son3'></view>
+</view>

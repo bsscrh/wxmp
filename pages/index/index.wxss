@@ -1,8 +1,8 @@
 .container{
     display: flex;
-    /* flex垂直 */
+    /* flex主轴垂直排列，默认row水平排列 */
     flex-direction: column;
-    /* 居中对齐 */
+    /* 副轴居中对齐 */
     align-items: center;
 }
 .logo{
@@ -23,4 +23,11 @@
 }
 .btn-text{
     color: #109D59;
+}
+.footer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
 }
