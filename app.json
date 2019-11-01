@@ -1,14 +1,12 @@
 {
   "pages": [
-    "pages/flex/flex",
+    "pages/news/news",
     "pages/index/index",
-    "pages/news/news"
-    
+    "pages/flex/flex"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
