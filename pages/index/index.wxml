@@ -1,0 +1,7 @@
+<view class='container'>
+  <image class='logo' src='../images/logo.png'></image>
+  <text class='username'>hello,bss</text>
+  <view class='btn'>
+    <text class='btn-text'>和音乐一起分享时光</text>
+  </view>
+</view>

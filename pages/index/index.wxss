@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    /* flex垂直 */
+    flex-direction: column;
+    /* 居中对齐 */
+    align-items: center;
+}
+.logo{
+    width: 392rpx;
+    height: 96rpx;
+    margin-top: 160rpx;
+}
+.username{
+    margin-top: 100rpx;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+.btn{
+    margin-top: 100rpx;
+    border: 1px solid #109D59;
+    padding: 10rpx 20rpx;
+    border-radius: 5px;
+}
+.btn-text{
+    color: #109D59;
+}
