@@ -13,18 +13,18 @@
 
   <view class='articlelist'>
     <view class='author-time'>
-      <image src="../images/head1.png" class='author-icon'></image>
-      <text class='author-name'>rh</text>
-      <text class='date'>2019/11/2</text>
+      <image src="{{newsData[0].authorIcon}}" class='author-icon'></image>
+      <text class='author-name'>{{newsData[0].authorNmae}}</text>
+      <text class='date'>{{newsData[0].date}}</text>
     </view>
-    <text class='title'>岁月不老，一世倾城</text>
-    <image class='articleimg' src='../images/sub1.png'></image>
-    <text class='articletext'>岁月不老，一世倾城岁月不老，一世倾城岁月不老，一世倾城</text>
+    <text class='title'>{{newsData[0].title}}</text>
+    <image class='articleimg' src='{{newsData[0].articleImg}}'></image>
+    <text class='articletext'>{{newsData[0].articleText}}</text>
     <view class='article-like'>
       <image src="../images/sc.png" class='sc'></image>
-      <text class='article-like-text'>30</text>
+      <text class='article-like-text'>{{newsData[0].sc}}</text>
       <image src='../images/fx.png' class='fx'></image>
-      <text class='article-like-text'>12</text>
+      <text class='article-like-text'>{{newsData[0].fx}}</text>
     </view>
   </view>
 
