@@ -1,3 +1,6 @@
+.container{
+  background-color: #f1f1f1;
+}
 .container swiper{
   width: 100%;
   height: 480rpx;
@@ -56,6 +59,7 @@
 }
 .article-like{
     font-size: 13px;
+    display: flex;
     flex-direction: row;
     line-height: 16px;
 }

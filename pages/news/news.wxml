@@ -27,4 +27,21 @@
       <text class='article-like-text'>12</text>
     </view>
   </view>
+
+  <view class='articlelist'>
+    <view class='author-time'>
+      <image src="../images/head1.png" class='author-icon'></image>
+      <text class='author-name'>rh</text>
+      <text class='date'>2019/11/2</text>
+    </view>
+    <text class='title'>岁月不老，一世倾城</text>
+    <image class='articleimg' src='../images/sub1.png'></image>
+    <text class='articletext'>岁月不老，一世倾城岁月不老，一世倾城岁月不老，一世倾城</text>
+    <view class='article-like'>
+      <image src="../images/sc.png" class='sc'></image>
+      <text class='article-like-text'>30</text>
+      <image src='../images/fx.png' class='fx'></image>
+      <text class='article-like-text'>12</text>
+    </view>
+  </view>
 </view>
