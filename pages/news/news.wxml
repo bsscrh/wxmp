@@ -1,3 +1,4 @@
+<import src="news-item/news-item-template.wxml" />
 <view class='container'>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}">
     <swiper-item>
@@ -10,38 +11,9 @@
       <image src='../images/banner3.jpg'></image>
     </swiper-item>
   </swiper>
-
-  <view class='articlelist'>
-    <view class='author-time'>
-      <image src="{{newsData[0].authorIcon}}" class='author-icon'></image>
-      <text class='author-name'>{{newsData[0].authorNmae}}</text>
-      <text class='date'>{{newsData[0].date}}</text>
-    </view>
-    <text class='title'>{{newsData[0].title}}</text>
-    <image class='articleimg' src='{{newsData[0].articleImg}}'></image>
-    <text class='articletext'>{{newsData[0].articleText}}</text>
-    <view class='article-like'>
-      <image src="../images/sc.png" class='sc'></image>
-      <text class='article-like-text'>{{newsData[0].sc}}</text>
-      <image src='../images/fx.png' class='fx'></image>
-      <text class='article-like-text'>{{newsData[0].fx}}</text>
-    </view>
-  </view>
-
-  <view class='articlelist'>
-    <view class='author-time'>
-      <image src="../images/head1.png" class='author-icon'></image>
-      <text class='author-name'>rh</text>
-      <text class='date'>2019/11/2</text>
-    </view>
-    <text class='title'>岁月不老，一世倾城</text>
-    <image class='articleimg' src='../images/sub1.png'></image>
-    <text class='articletext'>岁月不老，一世倾城岁月不老，一世倾城岁月不老，一世倾城</text>
-    <view class='article-like'>
-      <image src="../images/sc.png" class='sc'></image>
-      <text class='article-like-text'>30</text>
-      <image src='../images/fx.png' class='fx'></image>
-      <text class='article-like-text'>12</text>
-    </view>
-  </view>
+  <block wx:for="{{newsData}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+    <!-- 如果不用模板，模板里面的变量都要用{{item.authorNmae}}格式 -->
+    <!-- 下面的...作用是把item里面的值提取出来直接用，模板里面直接{{authorNmae}}就有值了 -->
+    <template is="newsItem" data="{{...item}}"/>
+  </block>
 </view>

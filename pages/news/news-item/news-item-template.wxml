@@ -1,0 +1,19 @@
+<!-- 如果不用模板，模板里面的变量都要用{{item.authorNmae}}格式 -->
+<template name="newsItem">
+  <view class='articlelist'>
+      <view class='author-time'>
+        <image src="{{authorIcon}}" class='author-icon'></image>
+        <text class='author-name'>{{authorNmae}}</text>
+        <text class='date'>{{create_time}}</text>
+      </view>
+      <text class='title'>{{title}}</text>
+      <image class='articleimg' src='{{articleImg}}'></image>
+      <text class='articletext'>{{articleText}}</text>
+      <view class='article-like'>
+        <image src="../images/sc.png" class='sc'></image>
+        <text class='article-like-text'>{{sc}}</text>
+        <image src='../images/fx.png' class='fx'></image>
+        <text class='article-like-text'>{{fx}}</text>
+      </view>
+    </view>
+</template>
