@@ -1,2 +1,3 @@
-<!--pages/news/news-detail/news-detail.wxml-->
-<text>pages/news/news-detail/news-detail.wxml</text>
+<view class="container">
+  <image src="{{newsDetail.articleImg}}" class='head-img'></image>
+</view>

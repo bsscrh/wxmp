@@ -4,14 +4,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    newsDetail:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.newsid);
+    var newsid = options.newsid;
+    var that = this;
+    wx.request({
+      url: 'http://zerg.com/api/v1/wxnews/' + newsid,
+      success(res){
+        that.setData({
+          newsDetail:res.data
+        })
+      }
+    })
   },
 
   /**
