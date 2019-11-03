@@ -2,7 +2,8 @@
   "pages": [
     "pages/news/news",
     "pages/index/index",
-    "pages/flex/flex"
+    "pages/flex/flex",
+    "pages/news/news-detail/news-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
