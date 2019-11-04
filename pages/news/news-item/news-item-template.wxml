@@ -3,7 +3,7 @@
   <view class='articlelist'>
       <view class='author-time'>
         <image src="{{authorIcon}}" class='author-icon'></image>
-        <text class='author-name'>{{authorNmae}}</text>
+        <text class='author-name'>{{authorName}}</text>
         <text class='date'>{{create_time}}</text>
       </view>
       <text class='title'>{{title}}</text>

@@ -1,3 +1,32 @@
 <view class="container">
   <image src="{{newsDetail.articleImg}}" class='head-img'></image>
+  <view class="author-data">
+    <image class="authorIcon" src="{{newsDetail.authorIcon}}"></image>
+    <text class="author">{{newsDetail.authorName}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{newsDetail.create_time}}</text>
+    <image src="../../images/earphone.png" class="music"></image>
+  </view>
+  <text class="title">{{newsDetail.title}}</text>
+  <view class="tool">
+    <view class="circle-img">
+      <image src="../../images/sc.png"></image>
+      <image src="../../images/fx.png" class="share-img"></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail">{{newsDetail.articleText}}</text>
+  <view class="comment">
+    <view class="commentblock">评价</view>
+    <view class="line"></view>
+    <view class="comment-user">
+      <view class="conmment-user-info">
+        <image src="../../images/head1.png"></image>
+        <text>crh</text>
+      </view>
+      <text class="comment-text">
+        很好。
+      </text>
+    </view>
+  </view>
 </view>
