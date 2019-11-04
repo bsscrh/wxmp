@@ -1,0 +1,1 @@
+<map bindmarkertap="markertap" longitude="{{longitude}}" latitude="{{latitude}}"></map>
