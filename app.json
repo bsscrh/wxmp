@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/map/map",
     "pages/news/news",
+    "pages/map/map",
     "pages/index/index",
     "pages/flex/flex",
     "pages/news/news-detail/news-detail"
