@@ -4,7 +4,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    newsDetail:""
   },
 
   /**
@@ -16,9 +15,9 @@ Page({
     wx.request({
       url: 'http://zerg.com/api/v1/wxnews/' + newsid,
       success(res){
-        that.setData({
-          newsDetail:res.data
-        })
+        that.setData(
+          res.data
+        )
       }
     })
   },

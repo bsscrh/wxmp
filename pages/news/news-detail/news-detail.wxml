@@ -1,13 +1,13 @@
 <view class="container">
-  <image src="{{newsDetail.articleImg}}" class='head-img'></image>
+  <image src="{{articleImg}}" class='head-img'></image>
   <view class="author-data">
-    <image class="authorIcon" src="{{newsDetail.authorIcon}}"></image>
-    <text class="author">{{newsDetail.authorName}}</text>
+    <image class="authorIcon" src="{{authorIcon}}"></image>
+    <text class="author">{{authorName}}</text>
     <text class="const-text">发表于</text>
-    <text class="date">{{newsDetail.create_time}}</text>
+    <text class="date">{{create_time}}</text>
     <image src="../../images/earphone.png" class="music"></image>
   </view>
-  <text class="title">{{newsDetail.title}}</text>
+  <text class="title">{{title}}</text>
   <view class="tool">
     <view class="circle-img">
       <image src="../../images/sc.png"></image>
@@ -15,7 +15,7 @@
     </view>
     <view class="horizon"></view>
   </view>
-  <text class="detail">{{newsDetail.articleText}}</text>
+  <text class="detail">{{articleText}}</text>
   <view class="comment">
     <view class="commentblock">评价</view>
     <view class="line"></view>
