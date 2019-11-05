@@ -10,8 +10,10 @@
       <image class='articleimg' src='{{articleImg}}'></image>
       <text class='articletext'>{{articleText}}</text>
       <view class='article-like'>
-        <image src="../images/sc.png" class='sc'></image>
+      <view catchtap="sc" data-newsid="{{id}}">
+        <image  src="../images/sc.png" class='sc' ></image>
         <text class='article-like-text'>{{sc}}</text>
+      </view>
         <image src='../images/fx.png' class='fx'></image>
         <text class='article-like-text'>{{fx}}</text>
       </view>

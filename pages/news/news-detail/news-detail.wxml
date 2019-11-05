@@ -1,3 +1,4 @@
+<text>{{openid}}</text>
 <view class="container">
   <image src="{{articleImg}}" class='head-img'></image>
   <view class="author-data">
