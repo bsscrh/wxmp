@@ -12,10 +12,25 @@
     </swiper-item>
   </swiper>
   <block wx:for="{{newsData}}" wx:for-index="index" wx:for-item="item" wx:key="key">
-    <!-- 如果不用模板，模板里面的变量都要用{{item.authorNmae}}格式 -->
-    <!-- 下面的...作用是把item里面的值提取出来直接用，模板里面直接{{authorNmae}}就有值了 -->
     <view bindtap='goNewsDetail' data-newsid="{{item.id}}">
-      <template is="newsItem" data="{{...item}}"/>
+      <view class='articlelist'>
+        <view class='author-time'>
+          <image src="{{item.authorIcon}}" class='author-icon'></image>
+          <text class='author-name'>{{item.authorName}}</text>
+          <text class='date'>{{item.create_time}}</text>
+        </view>
+        <text class='title'>{{item.title}}</text>
+        <image class='articleimg' src='{{item.articleImg}}'></image>
+        <text class='articletext'>{{item.articleText}}</text>
+        <view class='article-like'>
+          <view catchtap="sc" data-newsid="{{item.id}}" data-index="{{index}}">
+            <image src="../images/sc.png" class='sc'></image>
+            <text class='article-like-text'>{{item.sc}}</text>
+          </view>
+          <image src='../images/fx.png' class='fx'></image>
+          <text class='article-like-text'>{{item.fx}}</text>
+        </view>
+      </view>
     </view>
   </block>
 </view>
