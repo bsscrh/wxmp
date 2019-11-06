@@ -38,11 +38,18 @@ Page({
       url: 'http://zerg.com/api/v1/dosc/' + openid+'/'+newsid,
       success(res) {
         var newsData1 = that.data.newsData;
+        var status = res.data.status;
         if (res.data.status == "cancel_sc"){
           newsData1[index].sc -= 1;
         }else{
           newsData1[index].sc += 1;
         }
+        wx.showToast({
+          title: status=="cancel_sc"?'取消收藏':'收藏成功',
+          icon: 'success',
+          duration: 2000,
+          mask: true
+        })
         that.setData({
           newsData: newsData1
         })
