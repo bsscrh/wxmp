@@ -3,14 +3,14 @@ const app = getApp()
 Page({
   data: {
     indicatorDots: true,
-    autoplay:true,
+    autoplay: true,
     interval: 2000,
-    circular:true,
+    circular: true,
     newsData: "",
     openid: "",
-    newsid:"",
+    newsid: "",
   },
-  onLoad:function(){
+  onLoad: function() {
     var that = this;
     wx.request({
       url: 'http://zerg.com/api/v1/wxnews',
@@ -21,31 +21,31 @@ Page({
         })
       }
     });
-    
+
   },
-  goNewsDetail:function(event){
+  goNewsDetail: function(event) {
     var newsid = event.currentTarget.dataset.newsid;
     wx.navigateTo({
-      url: 'news-detail/news-detail?newsid='+newsid,
+      url: 'news-detail/news-detail?newsid=' + newsid,
     })
   },
-  sc:function(event){
+  sc: function(event) {
     var openid = app.globalData.openid
     var newsid = event.currentTarget.dataset.newsid;
     var index = event.currentTarget.dataset.index
-    var that =this;
+    var that = this;
     wx.request({
-      url: 'http://zerg.com/api/v1/dosc/' + openid+'/'+newsid,
+      url: 'http://zerg.com/api/v1/dosc/' + openid + '/' + newsid,
       success(res) {
         var newsData1 = that.data.newsData;
         var status = res.data.status;
-        if (res.data.status == "cancel_sc"){
+        if (res.data.status == "cancel_sc") {
           newsData1[index].sc -= 1;
-        }else{
+        } else {
           newsData1[index].sc += 1;
         }
         wx.showToast({
-          title: status=="cancel_sc"?'取消收藏':'收藏成功',
+          title: status == "cancel_sc" ? '取消收藏' : '收藏成功',
           icon: 'success',
           duration: 2000,
           mask: true
@@ -55,5 +55,28 @@ Page({
         })
       }
     });
+  },
+  fx: function() {
+    var itemList = ['A', 'B', 'C'];
+    wx.showActionSheet({
+      itemList: itemList,
+      success(res) {
+        console.log(itemList[res.tapIndex])
+      },
+      fail(res) {
+        console.log(res)
+      }
+    })
+  },
+  onShareAppMessage: function (res) {
+    console.log(res)
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/pages/news/news-detail/news-detail'
+    }
   }
 })

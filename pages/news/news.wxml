@@ -27,8 +27,10 @@
             <image src="../images/sc.png" class='sc'></image>
             <text class='article-like-text'>{{item.sc}}</text>
           </view>
-          <image src='../images/fx.png' class='fx'></image>
-          <text class='article-like-text'>{{item.fx}}</text>
+          <view catchtap="fx">
+            <image  src='../images/fx.png' class='fx'></image>
+            <text class='article-like-text'>{{item.fx}}</text>
+          </view>
         </view>
       </view>
     </view>
