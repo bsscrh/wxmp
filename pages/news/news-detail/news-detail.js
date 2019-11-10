@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    musicflag:false
   },
 
   /**
@@ -21,53 +22,43 @@ Page({
       }
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  playMusic: function(event){
+    var musicflag = this.data.musicflag;
+    if(musicflag){
+      wx.pauseBackgroundAudio();
+      this.setData({
+        musicflag: false
+      })
+    }else{
+      var that = this;
+      wx.playBackgroundAudio({
+        dataUrl: this.data.musicUrl,
+        title: this.data.musicTitle,
+        coverImgUrl: '',
+        success(res) {
+          console.log("成功", res);
+          that.setData({
+            musicflag: true
+          })
+        },
+        fail(res) {
+          console.log("失败", res)
+        }
+      })
+    }
+    
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/pages/news/news-detail/news-detail'
+    }
   }
 })

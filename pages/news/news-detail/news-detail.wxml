@@ -1,4 +1,3 @@
-<text>{{openid}}</text>
 <view class="container">
   <image src="{{articleImg}}" class='head-img'></image>
   <view class="author-data">
@@ -6,7 +5,7 @@
     <text class="author">{{authorName}}</text>
     <text class="const-text">发表于</text>
     <text class="date">{{create_time}}</text>
-    <image src="../../images/earphone.png" class="music"></image>
+    <image bindtap='playMusic' src="{{musicflag ? '../../images/earphone.png' : '../../images/eartag.png'}}" class="music"></image>
   </view>
   <text class="title">{{title}}</text>
   <view class="tool">
