@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/news/news",
     "pages/map/map",
-    "pages/index/index",
     "pages/flex/flex",
-    "pages/news/news-detail/news-detail"
+    "pages/news/news-detail/news-detail",
+    "pages/movie/movie"
   ],
   "permission": {
     "scope.userLocation": {
@@ -20,16 +21,16 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "pages/images/yuedu.png",
-        "selectedIconPath": "pages/images/yuedu.png"
-      },
-      {
         "pagePath": "pages/news/news",
         "text": "新闻",
         "iconPath": "pages/images/yuedu.png",
         "selectedIconPath": "pages/images/yuedu.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "pages/images/diany.png",
+        "selectedIconPath": "pages/images/diany.png"
       },
       {
         "pagePath": "pages/map/map",
@@ -37,6 +38,8 @@
         "iconPath": "pages/images/yuedu.png",
         "selectedIconPath": "pages/images/yuedu.png"
       }
-    ]
+    ],
+    "selectedColor":"#109D59",
+    "borderStyle":"white"
   }
 }
