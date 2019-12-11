@@ -1,12 +1,12 @@
-class Home {
+import { Base } from '../../utils/base.js';
+//继承Base就不需要实例化Base，不继承就得实例化
+class Home extends Base {
   getBannerData(id,callBack) {
-    wx.request({
-      url: 'http://zerg.com/api/v1/banner/'+id,
-      method:'GET',
-      success:function(res){
-        callBack(res);
-      }
-    })
+    var params = {
+      url: '/banner/'+id,
+      sCallback: callBack
+    };
+    this.request(params);
   }
 }
 
