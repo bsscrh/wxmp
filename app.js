@@ -20,7 +20,7 @@ App({
           },
           success: function (res) {
             var openid = res.data.openid //返回openid
-            console.log(openid)
+            // console.log("openid:",openid)
             that.globalData.openid = openid
           }
         })
