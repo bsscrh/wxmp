@@ -19,7 +19,8 @@ class Base{
         'token': wx.getStorageSync('token')
       },
       success: function (res) {
-        params.sCallback && params.sCallback(res.data);//这里的res.data参数是把返回结果传出去
+        //这里的sCallback接收的前面是传过来的整个函数，然后把wx.request处理完的res.data返回结果传出去
+        params.sCallback && params.sCallback(res.data);
       },
       fail:function(error){
         console.log('error:',error);

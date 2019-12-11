@@ -10,7 +10,7 @@ Page({
   },
   _loadData: function () {
     var id = 1;
-    // 获得bannar信息
+    // 获得bannar信息,这里是把这个函数传过去接收值
     // 这里的参数res是home.getBannerData()的success的返回结果
     var bannerData = home.getBannerData(id,(res)=>{
       this.setData({
