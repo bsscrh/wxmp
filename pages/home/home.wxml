@@ -1,4 +1,10 @@
 <view>
-  <swiper></swiper>
-  <view></view>
+  <swiper indicator-dots='true' autoplay='true' class="swiper">
+    <block wx:for="{{bannerData}}">
+      <swiper-item class="banner-item">
+        <image class="item-image" src='{{item.img.url}}' mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view>1</view>
 </view>

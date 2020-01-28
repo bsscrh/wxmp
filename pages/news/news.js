@@ -18,7 +18,8 @@ Page({
         that.setData({
           // 内部导入（见第一行）newsData:newsData.newsData
           newsData: res.data
-        })
+        }),
+        console.log(res.data)
       }
     });
 
