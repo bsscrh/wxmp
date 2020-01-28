@@ -10,13 +10,23 @@ Page({
   },
   _loadData: function () {
     var id = 1;
-    // 获得bannar信息,这里是把这个函数传过去接收值
+    var that = this;
+    // 获取bannar信息,这里是把这个函数传过去接收值
     // 这里的参数res是home.getBannerData()的success的返回结果
-    var bannerData = home.getBannerData(id,(res)=>{
-      this.setData({
+    home.getBannerData(id,(res)=>{
+      that.setData({
         bannerData: res.items
       })
       console.log(this.data.bannerData)
-    });  
+    });
+
+    /*获取主题信息*/
+    home.getThemeData((data) => {
+      that.setData({
+        themeArr: data,
+        loadingHidden: true
+      });
+      console.log(this.data.themeArr)
+    });
   }
 })
