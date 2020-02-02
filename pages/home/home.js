@@ -8,7 +8,7 @@ Page({
     this._loadData();
     
   },
-  _loadData: function () {
+  _loadData: function (callback) {
     var id = 1;
     var that = this;
     // 获取bannar信息,这里是把这个函数传过去接收值
@@ -26,7 +26,15 @@ Page({
         themeArr: data,
         loadingHidden: true
       });
-      console.log(this.data.themeArr)
+      // console.log(this.data.themeArr)
+    });
+
+    /*获取单品信息*/
+    home.getProductorData((data) => {
+      that.setData({
+        productsArr: data
+      });
+      // callback && callback();
     });
   }
 })
