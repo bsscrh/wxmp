@@ -1,11 +1,14 @@
 {
   "pages": [
+  
     "pages/home/home",
     "pages/index/index",
     "pages/news/news",
     "pages/map/map",
     "pages/news/news-detail/news-detail",
-    "pages/movie/movie"
+    "pages/movie/movie",
+    "pages/product/product",
+    "pages/theme/theme"
   ],
   "permission": {
     "scope.userLocation": {
