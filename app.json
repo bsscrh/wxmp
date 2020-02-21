@@ -50,7 +50,9 @@
         "text": "我的"
       }
     ],
-    "selectedColor":"#109D59",
-    "borderStyle":"white"
+    "selectedColor": "#AB956D",
+    "color": "#989898",
+    "borderStyle":"white",
+    "backgroundColor": "#F5F5F5"
   }
 }
