@@ -1,11 +1,17 @@
-// pages/product/product.js
+import { Product } from 'product-model.js';
+var product = new Product();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    loadingHidden: false,
+    hiddenSmallImg: true,
+    countsArray: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    productCounts: 1,
+    currentTabsIndex: 0,
+    cartTotalCounts: 0,
   },
 
   /**
@@ -13,9 +19,21 @@ Page({
    */
   onLoad: function (options) {
     var id = options.id;
-    console.log(id)
+    this.data.id = id;
+    this._loadData();
   },
-
+  /*加载所有数据*/
+  _loadData: function (callback) {
+    var that = this;
+    product.getDetailInfo(this.data.id, (data) => {
+      that.setData({
+        // cartTotalCounts: cart.getCartTotalCounts().counts1,
+        product: data,
+        // loadingHidden: true
+      });
+      callback && callback();
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
